@@ -1,0 +1,10 @@
+.books-list-container {
+  padding: 40px 0;
+  background-image: url('../../assets/wood-bg.jpg');
+  box-shadow: inset 2px 2px 4px black;
+  .book-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

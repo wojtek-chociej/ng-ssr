@@ -1,0 +1,108 @@
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 450px;
+  box-shadow: inset 2px 2px 4px black;
+  background: url('../../assets/ellipses.png') #114232 no-repeat;
+  background-position-x: -22%;
+  background-position-y: 10%;
+  background-size: 800px;
+
+  .footer-information-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 85%;
+    padding: 0 60px;
+    width: 60%;
+
+    .subscription-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 0 10px;
+      input {
+        background: #f7f6bb;
+        border-radius: 30px;
+        width: 100%;
+        height: 20px;
+        padding: 10px 0 10px 15px;
+        border: none;
+        box-shadow: inset 1px 1px 2px #114232;
+      }
+
+      button {
+        position: absolute;
+        background: #87a922;
+        border: 2px solid #fcdc2a;
+        border-radius: 30px;
+        width: 200px;
+        height: 40px;
+        color: #f7f6bb;
+        font-size: 16px;
+        font-weight: 700;
+        text-shadow: 0 0 2px #fcdc2a;
+        box-shadow: inset 1px 1px 2px #114232;
+        right: 0;
+      }
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: space-between;
+
+      h6 {
+        color: #f7f6bb;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+          color: #f7f6bb;
+          line-height: 1.7;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .copyrights-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #f7f6bb;
+      margin-bottom: -40px;
+      padding-top: 10px;
+
+      p {
+        color: #f7f6bb;
+        font-size: 13px;
+      }
+
+      .social-media-icons-container {
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+          margin-right: 10px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1050px) {
+    justify-content: center;
+    .footer-information-container {
+      width: 100%;
+    }
+  }
+}

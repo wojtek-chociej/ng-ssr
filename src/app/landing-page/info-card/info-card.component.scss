@@ -1,0 +1,44 @@
+.info-container {
+  display: grid;
+  grid-template-rows: 150px 150px;
+  grid-template-columns: 230px;
+  grid-row-gap: 20px;
+  margin: auto 20px;
+
+  .info-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1 / 1 / 2 / 2;
+
+    .ellipse {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 2px #333333;
+    }
+
+    .light-green-ellipse {
+      background: linear-gradient(
+        135deg,
+        rgba(135, 169, 34, 1) 0%,
+        rgba(135, 169, 34, 1) 50%,
+        rgba(165, 208, 40, 1) 50%,
+        rgba(165, 208, 40, 1) 100%
+      );
+    }
+
+    .dark-green-ellipse {
+      background: #114232;
+    }
+  }
+
+  .important-info-decs {
+    text-align: center;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 300px;
+  }
+}

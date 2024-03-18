@@ -1,0 +1,32 @@
+.navigation-container {
+  background: #114232;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+
+  .logo-container {
+    display: flex;
+    padding: 0 25px;
+    align-items: center;
+
+    .logo-name {
+      padding-left: 10px;
+      color: #fcdc2a;
+      font-family: 'Marcellus', serif;
+      font-size: 25px;
+      text-decoration: none;
+      text-shadow: 2px 2px 2px #333333;
+    }
+  }
+
+  .links-container {
+    a {
+      color: #f7f6bb;
+      text-decoration: none;
+      margin-right: 30px;
+      text-shadow: 2px 2px 2px #333333;
+    }
+  }
+}

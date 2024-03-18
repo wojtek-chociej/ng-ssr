@@ -1,0 +1,11 @@
+<div class="info-container">
+  <div class="info-icon">
+    <div class="ellipse" [ngClass]="ellipseColorClass"></div>
+    <ng-content></ng-content>
+  </div>
+
+  <div class="important-info-decs">
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+  </div>
+</div>

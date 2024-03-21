@@ -1,0 +1,7 @@
+<div class="books-list-container">
+  <div class="book-cards-container">
+    @for (book of books; track book.title) {
+      <app-book [book]="book" />
+    }
+  </div>
+</div>

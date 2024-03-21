@@ -11,5 +11,5 @@ import { IBook } from '../../../models/book.model';
   styleUrl: './book.component.scss',
 })
 export class BookComponent {
-  @Input() book?: IBook;
+  @Input({required: true}) book!: IBook;
 }

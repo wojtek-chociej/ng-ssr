@@ -12,12 +12,13 @@
     </svg>
     <span>Back</span>
   </button>
+  @if (book) {
   <div class="book-container">
-    <img [src]="book?.imageLink" [alt]="book?.title" />
+    <img [src]="book.imageLink" [alt]="book.title" />
     <div class="book-item-details-container">
-      <h2>{{ book?.title }}</h2>
-      <p>{{ book?.price | number: '1.2-2' | currency: 'PLN ' }}</p>
-      <p>{{ book?.description }}</p>
+      <h2>{{ book.title }}</h2>
+      <p>{{ book.price | number: '1.2-2' | currency: 'PLN ' }}</p>
+      <p>{{ book.description }}</p>
       <p class="lorem-ipsum-paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Sociis natoque
@@ -37,4 +38,5 @@
       </p>
     </div>
   </div>
+  }
 </div>

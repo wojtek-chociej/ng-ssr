@@ -7,7 +7,7 @@ import { IBook } from '../../models/book.model';
 @Component({
   selector: 'app-books-list',
   standalone: true,
-  imports: [BookComponent, RouterLink],
+  imports: [RouterLink, BookComponent],
   templateUrl: './books-list.component.html',
   styleUrl: './books-list.component.scss',
 })

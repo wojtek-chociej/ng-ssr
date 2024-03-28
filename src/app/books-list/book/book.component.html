@@ -8,7 +8,7 @@
   </div>
   <div class="book-info-wrapper">
     <h2>{{ book.title }}</h2>
-    <p>{{ book.price | number: '1.2-2' | currency: 'PLN ' }}</p>
+    <p>{{ book.price | currency: currencyCode : 'code' : '1.2-2' }}</p>
     <p>{{ book.description }}</p>
   </div>
 </div>

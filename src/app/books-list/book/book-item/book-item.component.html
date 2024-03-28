@@ -10,33 +10,34 @@
         fill="#f7f6bb"
         d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
     </svg>
-    <span>Back</span>
+    <span i18n>Back</span>
   </button>
   @if (book) {
-  <div class="book-container">
-    <img [src]="book.imageLink" [alt]="book.title" />
-    <div class="book-item-details-container">
-      <h2>{{ book.title }}</h2>
-      <p>{{ book.price | number: '1.2-2' | currency: 'PLN ' }}</p>
-      <p>{{ book.description }}</p>
-      <p class="lorem-ipsum-paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Sociis natoque
-        penatibus et magnis. Mauris in aliquam sem fringilla ut morbi tincidunt
-        augue interdum. Sit amet volutpat consequat mauris nunc congue nisi
-        vitae. At quis risus sed vulputate odio. Tincidunt dui ut ornare lectus.
-        Gravida dictum fusce ut placerat orci nulla pellentesque. Nam aliquam
-        sem et tortor consequat id porta nibh venenatis. Amet nulla facilisi
-        morbi tempus. Ipsum suspendisse ultrices gravida dictum fusce ut. Eget
-        mi proin sed libero enim sed faucibus turpis in. Aenean pharetra magna
-        ac placerat vestibulum lectus mauris ultrices. Sit amet tellus cras
-        adipiscing enim eu. Mi ipsum faucibus vitae aliquet nec ullamcorper sit
-        amet. Amet purus gravida quis blandit turpis cursus in hac habitasse.
-        Facilisis magna etiam tempor orci eu lobortis. Scelerisque eu ultrices
-        vitae auctor eu augue ut. Egestas fringilla phasellus faucibus
-        scelerisque eleifend donec. Leo vel orci porta non pulvinar.
-      </p>
+    <div class="book-container">
+      <img [src]="book.imageLink" [alt]="book.title" />
+      <div class="book-item-details-container">
+        <h2>{{ book.title }}</h2>
+        <p>{{ book.price | currency: currencyCode : 'code' : '1.2-2' }}</p>
+        <p>{{ book.description }}</p>
+        <p class="lorem-ipsum-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sociis
+          natoque penatibus et magnis. Mauris in aliquam sem fringilla ut morbi
+          tincidunt augue interdum. Sit amet volutpat consequat mauris nunc
+          congue nisi vitae. At quis risus sed vulputate odio. Tincidunt dui ut
+          ornare lectus. Gravida dictum fusce ut placerat orci nulla
+          pellentesque. Nam aliquam sem et tortor consequat id porta nibh
+          venenatis. Amet nulla facilisi morbi tempus. Ipsum suspendisse
+          ultrices gravida dictum fusce ut. Eget mi proin sed libero enim sed
+          faucibus turpis in. Aenean pharetra magna ac placerat vestibulum
+          lectus mauris ultrices. Sit amet tellus cras adipiscing enim eu. Mi
+          ipsum faucibus vitae aliquet nec ullamcorper sit amet. Amet purus
+          gravida quis blandit turpis cursus in hac habitasse. Facilisis magna
+          etiam tempor orci eu lobortis. Scelerisque eu ultrices vitae auctor eu
+          augue ut. Egestas fringilla phasellus faucibus scelerisque eleifend
+          donec. Leo vel orci porta non pulvinar.
+        </p>
+      </div>
     </div>
-  </div>
   }
 </div>

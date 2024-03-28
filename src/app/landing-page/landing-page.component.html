@@ -1,12 +1,19 @@
 <div class="section-1-container">
   <div class="website-title-container">
-    <h1>CO TAM BY POCZYTAŁ? <span class="lenny-face">( ͡°͜ʖ ͡° )</span></h1>
+    <h1>
+      <span class="website-title" i18n>WHAT YOU WOULD THERE READ, HUH? </span>
+      <span class="lenny-face">( ͡°͜ʖ ͡° )</span>
+    </h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at
       fermentum orci. Suspendisse tristique mauris eu dolor malesuada ultrices.
     </p>
     <label for="find-book">
-      <input type="text" id="find-book" placeholder="Wyszukaj książkę..." />
+      <input
+        type="text"
+        id="find-book"
+        i18n-placeholder
+        placeholder="Search for a book..." />
       <svg
         width="25"
         height="25"
@@ -29,13 +36,13 @@
   </div>
   <div class="book-img-container">
     <div class="ellipse-around-books">
-      <img src="assets/book.png" alt="book" />
+      <img src="assets/book.png" i18n-alt alt="book" />
     </div>
   </div>
 </div>
 <div class="section-2-container">
   <div class="semi-transparent-container">
-    @for (element of componentInformation; track element.title) {
+    @for (element of infoCards; track element.title) {
       <app-info-card
         [ellipseColorClass]="element.cssClass"
         [title]="element.title"
@@ -87,16 +94,13 @@
           fill="#114232"
           d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z" />
       </svg>
-      <h1>Rated by Client on Our Products</h1>
+      <h1 i18n>Rated by Client on Our Products</h1>
     </div>
     <div class="reviewers-container">
-      <img
-        class="reviewers"
-        src="../../assets/reviewer-img.png"
-        alt="reviewers" />
+      <img class="reviewers" src="assets/reviewer-img.png" alt="reviewers" />
       <h3>Tymur Szymczak</h3>
       <p class="position-title">CEO e-Krew</p>
-      <img class="stars" src="../../assets/stars.png" alt="stars" />
+      <img class="stars" src="assets/stars.png" alt="stars" />
       <p class="comment">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at
         fermentum orci.

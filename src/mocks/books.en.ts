@@ -1,5 +1,6 @@
 import { IBook } from '../models/book.model';
-export const Books: IBook[] = [
+
+export const BooksEn: IBook[] = [
   {
     id: '1',
     title: 'The Alchemist',
@@ -15,7 +16,7 @@ export const Books: IBook[] = [
     imageLink: 'https://m.media-amazon.com/images/I/71FeSnX3-YL._UX250_.jpg',
     price: 20.5,
     description:
-      'A novel by Harper Lee, set in the American South during the 1930s, that deals with serious issues such as rape and racial inequality.',
+      'A novel by Harper Lee, set in the American South during the 1930s, that deals with serious issues such as racial inequality.',
   },
   {
     id: '3',

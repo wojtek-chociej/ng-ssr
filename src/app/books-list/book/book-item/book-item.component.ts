@@ -1,25 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BooksService } from '../../../books.service';
-import { CurrencyPipe, DecimalPipe } from '@angular/common';
 import { IBook } from '../../../../models/book.model';
+import { CurrencyPipe } from '@angular/common';
+import { CurrencyCode } from '../../../../models/types';
 
 @Component({
   selector: 'app-book-item',
   standalone: true,
-  imports: [DecimalPipe, CurrencyPipe, RouterLink],
+  imports: [RouterLink, CurrencyPipe],
   templateUrl: './book-item.component.html',
   styleUrl: './book-item.component.scss',
 })
-export class BookItemComponent implements OnInit {
-  bookId!: string;
-  book?: IBook;
+export class BookItemComponent {
+  book: IBook | undefined = this.booksService.getBook(
+    this.route.snapshot.params['id']
+  );
+  currencyCode: CurrencyCode = this.booksService.currencyCode;
 
   constructor(
     private route: ActivatedRoute,
     private booksService: BooksService
   ) {}
-  ngOnInit() {
-    this.book = this.booksService.getBook(this.route.snapshot.params['id']);
-  }
 }

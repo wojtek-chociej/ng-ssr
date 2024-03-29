@@ -1,14 +1,14 @@
-<div class="book-card" [routerLink]="['/books', book?.id]">
+<div class="book-card" [routerLink]="['/books', book.id]">
   <div class="image-wrapper">
     <img
-      [src]="book?.imageLink"
-      [alt]="book?.title"
+      [src]="book.imageLink"
+      [alt]="book.title"
       height="200px"
       width="150px" />
   </div>
   <div class="book-info-wrapper">
-    <h2>{{ book?.title }}</h2>
-    <p>{{ book?.price | number: '1.2-2' | currency: 'PLN ' }}</p>
-    <p>{{ book?.description }}</p>
+    <h2>{{ book.title }}</h2>
+    <p>{{ book.price | currency: currencyCode : 'code' : '1.2-2' }}</p>
+    <p>{{ book.description }}</p>
   </div>
 </div>

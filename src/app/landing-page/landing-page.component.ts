@@ -1,13 +1,14 @@
-import { Component, Inject, LOCALE_ID } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { InfoCardComponent } from './info-card/info-card.component';
-import { NgClass } from '@angular/common';
-import { FooterComponent } from '../footer/footer.component';
-import { IBook } from '../../models/book.model';
-import { IInfoCard } from '../../models/info-card.model';
-import { BooksService } from '../books.service';
-import { infoCardEn } from '../../mocks/info-card.en';
-import { LanguageId } from '../../models/types';
+import {Component, Inject, LOCALE_ID} from '@angular/core';
+import {RouterLink} from '@angular/router';
+import {InfoCardComponent} from './info-card/info-card.component';
+import {NgClass} from '@angular/common';
+import {FooterComponent} from '../footer/footer.component';
+import {IBook} from '../../models/book.model';
+import {IInfoCard} from '../../models/info-card.model';
+import {BooksService} from '../books.service';
+import {infoCardEn} from '../../mocks/info-card.en';
+import {LanguageId} from '../../models/types';
+import {infoCardPl} from "../../mocks/info-card.pl";
 
 @Component({
   selector: 'app-landing-page',
@@ -18,10 +19,11 @@ import { LanguageId } from '../../models/types';
 })
 export class LandingPageComponent {
   books: IBook[] = this.booksService.books;
-  infoCards: IInfoCard[] = this.locale === 'en-US' ? infoCardEn : infoCardEn;
+  infoCards: IInfoCard[] = this.locale === 'en-US' ? infoCardEn : infoCardPl;
 
   constructor(
     private booksService: BooksService,
     @Inject(LOCALE_ID) private locale: LanguageId
-  ) {}
+  ) {
+  }
 }

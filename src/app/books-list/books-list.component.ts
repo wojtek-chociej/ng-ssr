@@ -12,6 +12,8 @@ import { BooksService } from '../books.service';
   styleUrl: './books-list.component.scss',
 })
 export class BooksListComponent {
+
+  date = new Date();
   books: IBook[] = this.booksService.books;
 
   constructor(private booksService: BooksService) {}

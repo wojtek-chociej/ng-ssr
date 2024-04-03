@@ -21,6 +21,8 @@ export class LandingPageComponent {
   books: IBook[] = this.booksService.books;
   infoCards: IInfoCard[] = this.locale === 'en-US' ? infoCardEn : infoCardPl;
 
+  date = new Date();
+
   constructor(
     private booksService: BooksService,
     @Inject(LOCALE_ID) private locale: LanguageId

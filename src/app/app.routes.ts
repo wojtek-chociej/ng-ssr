@@ -4,7 +4,7 @@ import { BooksListComponent } from './books-list/books-list.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 export const routes: Routes = [
-  { path: '', component: LandingPageComponent },
-  { path: 'books', component: BooksListComponent },
-  { path: 'books/:id', component: BookItemComponent },
+  { path: '', component: LandingPageComponent, data: { revalidate: 30 }, },
+  { path: 'books', component: BooksListComponent, data: { revalidate: 30 }, },
+  { path: 'books/:id', component: BookItemComponent, data: { revalidate: 30 }, },
 ];

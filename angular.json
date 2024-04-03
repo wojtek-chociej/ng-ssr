@@ -7,7 +7,9 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "pl": "src/locale/messages.pl.xlf"
+          "pl": {
+            "translation": "src/locale/messages.pl.xlf"
+          }
         }
       },
       "projectType": "application",
@@ -23,7 +25,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize": ["pl"],
+            "localize": ["pl","en-US"],
             "outputPath": "dist/ng-ssr",
             "index": "src/index.html",
             "browser": "src/main.ts",

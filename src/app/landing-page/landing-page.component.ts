@@ -17,6 +17,8 @@ import { IInfoCard } from '../../models/info-card.model';
 export class LandingPageComponent {
   books: IBook[] = Books;
 
+  date = new Date();
+
   componentInformation: IInfoCard[] = [
     {
       title: 'WYBÓR KSIĄŻEK',

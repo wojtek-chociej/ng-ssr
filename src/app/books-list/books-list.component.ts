@@ -12,5 +12,7 @@ import { IBook } from '../../models/book.model';
   styleUrl: './books-list.component.scss',
 })
 export class BooksListComponent {
+
+  date = new Date();
   books: IBook[] = Books;
 }

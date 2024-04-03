@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformServer } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
-import { BooksListComponent } from './books-list/books-list.component';
 import { FooterComponent } from './footer/footer.component';
 
 @Component({
@@ -12,12 +11,15 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     RouterOutlet,
     NavigationComponent,
-    BooksListComponent,
     FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  isPlatformServer = isPlatformServer(this.platformId);
+
+  constructor(@Inject(PLATFORM_ID) private platformId: string){}
+
   title = 'ng-ssr';
 }

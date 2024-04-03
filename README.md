@@ -1,39 +1,27 @@
-- Dodanie ssr do projektu, stworzenie projektu z ssr
+## Angular SSR SSG oraz ISR
 
-  - komendy z cli
-  - co się dodaje do projektu po komendach
+Server Side Rendering - renderowanie po stronie serwera
 
-- Konfiguracja serwera renderującego stronę
+Static Site Generation - generowanie statycznych plików
 
-- Hydration
-  - wyjaśnienie czym jest, jak dodać
-  - wyjaśnienie problemów z nim związanych
-- Cache wykonanych requestów do API z serwera na client
+Incremental Static Regeneration - cache oraz prerenderowanie 'w locie' wybranych stron
 
-- Static site generation
+### Gałęzie
 
-  - wyjaśnienie czym jest,
-  - dodać można, że jeśli nie możemy używać nodeJS (Azure), to jest to dobry wybór
-  - jak dodać dynamiczne strony
+Na konkretnych gałęziach znajdziesz rozwiązania wybranych tematów
 
-- i18n
+- `i18n` - Wielojęzyczność oraz SSR z SSG
+- `i18n-isr` - Wielojęzyczność oraz SSR z ISR
+- `isr` - SSR z ISR
+- `without-isr` - samo SSR z SSG
 
-  - działanie z SSR
-  - działanie z SSG
-  - działanie z hydration
 
-- PWA
+### Uruchomienie
 
-  - działanie z SSR
-  - działanie z SSG
-  - działanie z hydration
+`npm run build`
 
-- Wykonanie kodu na serwerze a na kliencie
+`npm run serve:ssr:ng-ssr` - nodeJS
 
-  - kod dostępny tu i tu
-  - kod dostępny tylko na serwerze (czy się da)
+`http-server dist/ng-ssr/browser` - Serwer statycznych plików (SSG)
 
-- Problemy związane z SSR i SSG
-  - brak dostępu do globalnych obiektów przeglądarki
-  - brak dostępu do niektórych propertek elementów
-  - obejście problemu
+W konsoli wyświetli się na jakim porcie i na jakim url działa strona. Ważne, by wejść na podstrony `/pl` lub `/en-US`.
